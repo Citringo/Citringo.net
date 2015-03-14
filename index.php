@@ -142,6 +142,29 @@ if ($pagename == "") { //まっしろけならfrontpage
 				</div><!--navbar collapse -->
 			</div><!--container-->
 		</nav><!--navbar-->
+		<div class="dark-theme marquee" style="width: 50%; text-align: center;">
+			<?php
+					echo getmes();
+					function getmes()
+					{
+						$i = rand(10);
+						switch($i)
+						{
+							case 0: return "ฅ(º ﾛ º ฅ)＜にょほーーーーwwwwwww";
+							case 1: return "あぁ^～心がぴょんぴょんするんじゃぁ^～";
+							case 2: return "誰がハゲじゃハゲ";
+							case 3: return "まあ幼稚園の頃にすでにパソコンで遊んでたけど<( 'ω')>";
+							case 4: return "頭がフワフワする…";
+							case 5: return "└(՞ةڼ◔)」ﾇﾍﾞﾁﾞｮﾝﾇｿﾞｼﾞｮﾝﾍﾞﾙﾐｯﾃｨｽﾓｹﾞﾛﾝﾎﾞｮ";
+							case 6: return "ｶﾆｶﾞﾀﾋﾞｰﾑ(」'ω')」--------------☆";
+							case 7: return "プログラミングと作曲が趣味です";
+							case 8: return "Citringo.net は用量・用法を守って正しく使いましょう";
+							case 9: return "▂▅▇█▓▒░(’ω’)░▒▓█▇▅▂うわああああああ";
+							
+						}
+					}
+			?>
+		</div>
 		<main class="maincontainer">
 			<?php
 			$pagename .= ".html";
