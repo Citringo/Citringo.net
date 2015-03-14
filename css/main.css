@@ -1,0 +1,139 @@
+/* Citringo.net Main Style Sheet
+ * (C)2015 Citringo
+ * CSS3 に準拠。
+ */
+
+body {
+    padding-top: 50px;
+	background-color: #101010;
+	font-family: mplus-1p-regular, "ヒラギノ角ゴ ProN", 'Hiragino Kaku Gothic ProN', "メイリオ", "IPAexゴシック", "VL ゴシック","Takao Gothic", "TakaoExゴシック", "Segoe UI Light", Arial;
+}
+.maincontainer {
+    margin: 4px 4px;
+	padding: 16px 16px;
+    text-align: left;
+	font-size: 13pt;
+	background-color: white;
+}
+
+img {
+    max-width: max-content;
+    height: auto;
+}
+
+.mycarousel {
+	max-width: 640px;
+	max-height: 480px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.headerback {
+	position: relative;
+	padding: 16px;
+	color: #ffffff;
+	text-align: center;
+	background-color: #101010;
+	background-image: url(../resources/darkcarpet.png);
+}
+
+.headerback img {
+	max-width: 80%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2% 2%; 
+	background-color: rgba(255,255,255,0.5);
+}
+
+.thumbnail img {
+	padding: 8% 8%; /* 消費税<( 'ω')> */
+}
+
+// SNSリンクでのロゴに使う₍₍ (ง 'ω')ว ⁾⁾
+.servicelogo {
+	width: 32px; height: 26px; margin: 16px 13px;
+}
+
+.footerback {
+	text-align: center;
+	padding: 16px 8px;
+	color: #ffffff;
+	font-size: small;
+	background-color: #101010;
+	background-image: url(../resources/darkcarpet.png);
+}
+
+.footerback p a {
+	color: lightskyblue;
+}
+
+.footerback p a :visited {
+	color: lightpink;
+}
+
+.show-on-mobile-inline {
+	display: inline;
+}
+
+.show-on-mobile-block {
+	display: block;
+}
+
+.show-on-pc-inline {
+	display: none;
+}
+
+.show-on-pc-block {
+	display: none;
+}
+
+@media ( min-width : 768px) {
+	.show-on-mobile-inline {
+		display: none;
+	}
+
+	.show-on-mobile-block {
+		display: none;
+	}
+
+	.show-on-pc-inline {
+		display: inline;
+	}
+
+	.show-on-pc-block {
+		display: block;
+	}
+}
+
+@font-face
+{
+font-family: mplus-1p-regular;
+src: url('http://mplus-fonts.sourceforge.jp/webfonts/mplus-1p-regular.ttf')
+     format("truetype");
+}
+
+.btn-headerback {
+	color: #ffffff;
+	background-color: transparent;
+	border-color: #ffffff;
+}
+
+.btn-headerback:hover, .btn-headerback:focus, .btn-headerback.focus, .btn-headerback:active,
+	.btn-headerback.active, .open>.dropdown-toggle.btn-headerback {
+	color: black;
+	background-color: #ffffff;
+	border-color: #ffffff;
+}
+
+.dark-theme {
+	padding: 8px;
+	color: white;
+	background-color: black;
+}
+
+.light-theme {
+	padding: 8px;
+	color: black;
+	background-color: white;
+}

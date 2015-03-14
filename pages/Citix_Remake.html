@@ -1,0 +1,154 @@
+<h1>Citixを作りなおすことにした。</h1>
+
+<p>
+	CtrGEをベースに、色々と要素を加えていく方針。
+</p>
+
+<h1>メモ！</h1>
+
+<blockquote>
+	シトリン♪VSのイメージライブラリーにある汎用アイコンを元に、Citix Common Icons ◆Win8OL9j2k 2014/03/30 18:25<br />
+
+	シトリン♪wo ◆Win8OL9j2k 2014/03/30 18:25<br />
+
+	シトリン♪作る ◆Win8OL9j2k 2014/03/30 18:25<br />
+	シトリン♪テーマから変更可能 ◆Win8OL9j2k 2014/03/30 18:25<br />
+
+	シトリン♪その他にも、APIを使ってユーザー領域にリソースを割り当てることができて、API呼び出し後の戻り値がIDになる ◆Win8OL9j2k 2014/03/30 18:26<br />
+
+</blockquote>
+
+<blockquote>
+	Citrine▼ウィンドウ描画ルーチンは、@WNDRW_【テーマ名】 ◆Win8OL9j2k 2014/04/02 17:45
+</blockquote>
+
+<h1>仕様書</h1>
+
+<p>Old Citixとは仕様が大きく異なるんDA。</p>
+
+<div class="panel">
+	<div class="panel-body">
+		<div>バージョン表記:</div>
+		<p>VER$ 変数に代入します。フォーマットは
+			(Alpha/ Beta/ RC/ 無印 / ... ) バージョン数値。もしかしたら変更するかもしれないけど。
+		</p>
+	</div>
+</div>
+<div class="panel">
+	<div class="panel-body">
+		GTS$()について
+		<ol>
+			<li value="0">アプリ種類名</li>
+			<li>アイコン</li>
+			<li>テキスト</li>
+			<li>子コントロールハンドル</li>
+		</ol>
+	</div>
+</div>
+
+<div class="panel">
+	<div class="panel-body">
+		GTS()について
+		<ol>
+			<li value="0">X</li>
+			<li>Y</li>
+			<li>W</li>
+			<li>H</li>
+			<li>ウィンドウフラグ</li>
+			<li>ウィンドウ内カーソルX</li>
+			<li>ウィンドウ内カーソルY</li>
+			<li>ドラッグ時のウィンドウ内カーソルX</li>
+			<li>ドラッグ時のウィンドウ内カーソルY</li>
+			<li>クリックTick</li>
+			<li>ドラッグされているかどうか</li>
+			<li>自分にタスクが渡された時の前回ボタン情報</li>
+			<li>BackColor</li>
+			<li>ForeColor</li>
+			<li>最大化されているかどうか</li>
+			<li>最小化されているかどうか</li>
+			<li>特殊状態になる前のウィンドウX</li>
+			<li>特殊状態になる前のウィンドウY</li>
+			<li>特殊状態になる前のウィンドウW</li>
+			<li>特殊状態になる前のウィンドウH</li>
+			<li>リサイズしているところであるかどうか</li>
+			<li>最小ウィンドウW</li>
+			<li>最小ウィンドウH</li>
+			<li>ウィンドウモード: 0...ふつう 1...固定</li>
+			<li>固有ID</li>
+		</ol>
+	</div>
+</div>
+
+<div class="panel">
+	<div class="panel-body">
+		・エイリアス<br />
+		GX...X<br />
+		GY...Y<br />
+		GW...W<br />
+		GH...H<br />
+		GF...フラグ<br />
+		GMX...内部カーソルX<br />
+		GMY...内部カーソルY<br />
+	</div>
+</div>
+
+<div id="CitixResources">
+	<div class="panel">
+		<div class="panel-body">
+			Citix Resources
+			<ol>
+				<li value="0">Null</
+				<li>(null)</li>
+				<li>System-Logo</li>
+				<li>CWS-Button-Close</li>
+				<li>CWS-Button-Maximize</li>
+				<li>CWS-Button-Return</li>
+				<li>CWS-Button-Minimize</li>
+				<li>CGK-CheckBox-off</li>
+				<li>CGK-CheckBox-on</li>
+				<li>CGK-RadioButton-off</li>
+				<li>CGK-RadioButton-on</li>
+				<li>CtrBar-Notification</li>
+				<li>CtrBar-Volume-0</li>
+				<li>CtrBar-Volume-1</li>
+				<li>CtrBar-Volume-2</li>
+				<li>CtrBar-Volume-3</li>
+				<li>CtrBar-Volume-Disabled</li>
+				<li>CtrBar-Volume-Mute</li>
+				<li>CGK-TrackBar</li>
+				<li>System-Shutdown</li>
+				<li>System-Restart</li>
+				<li>Dialog-Error</li>
+				<li>Dialog-Warning</li>
+				<li>Dialog-Info</li>
+				<li>Dialog-Question</li>
+				<li>CGK-TextBox-ClearButton</li>
+				<li>CGK-TextBox-EyeButton</li>
+				<li>CCI-Play</li>
+				<li>CCI-Stop</li>
+				<li>CCI-Left</li>
+				<li>CCI-Up</li>
+				<li>CCI-Right</li>
+				<li>CCI-Down</li>
+				<li>CCI-New</li>
+				<li>CCI-Open</li>
+				<li>CCI-Save</li>
+				<li>CCI-Undo</li>
+				<li>CCI-Redo</li>
+				<li>CCI-Back</li>
+				<li>CCI-Forward</li>
+				<li>CCI-Print</li>
+				<li>CCI-Cut</li>
+				<li>CCI-Copy</li>
+				<li>CCI-Paste</li>
+			</ol>
+		</div>
+	</div>
+</div>
+
+<h2>アプリ初期化DATA文の書式</h2>
+<div class="panel">
+	<div class="panel-body">
+DATA [Width],[Height],"[アイコン文字列]", [BackColor], [ウィンドウモード],"[テキスト]"(ウィンドウモードが0の場合)<,[最小Width], [最小Height]>
+	</div>
+</div>

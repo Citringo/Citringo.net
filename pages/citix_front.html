@@ -1,0 +1,271 @@
+<div class="panel panel-default">
+	<div class="panel-body">
+		<img src="resources/CitixLogo.svg">
+		<p>
+			Citix は、カーネルを刷新した OS もどきです。現在、Citixは設計と開発をマルチタスクで進めています。<br />
+			その設計データをここに書きます。
+		</p>
+	</div>
+</div>
+
+
+<hr />
+
+<h2>Citix</h2>
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		全く新しいカーネルを持つ OS もどき。プチコン上で開発を行う。
+	</div>
+</div>
+
+<strong>(2014/3/11)作りなおすことにしました。</strong>
+
+<h2 id="qr">プレビュー版公開</h2>
+<div class="panel panel-default"><div class="panel-body"></div></div>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<img src="resources/ctxdevpre.png">
+	</div>
+</div>
+
+<h2>タスク</h2>
+<p style="padding-left:16px">
+	メインタスク: 20<br />
+	バックグラウンドタスク: 20<br />
+	システム予約タスク: 上２つに統合、区別しない<span class="undefined">(暫定)</span><br />
+</p>
+
+<h2>ファイルシステム</h2>
+TPFS ファイルシステム(開発中)を利用する。
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		<img src="resources/citixkernelmock.png">
+		CUI 環境。私はこれを CitixCmd と名づけた。コマンドラインから操作するインターフェース。
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		<img src="resources/citixcwsmock.png">
+		将来作りたいなーって思っているウィンドウシステム。Citix Window System の頭文字をとって CWS と名づけた。
+		<strong>※2014/1現在: CWS鋭意開発中です！</strong>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		<img src="resources/citix.png">
+		こんな感じの関係。やっつけ？かんべんしてくれー
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		メモ...<br />
+		TSK$([TaskNo], 0)= タスク名<br />
+		TSK$([TaskNo], 1)= アイコンのデータ<br />
+		TSK$([TaskNo], 2)= フォームのテキスト<br />
+		TSK$([TaskNo], 3)= ウィンドウ幅<br />
+		TSK$([TaskNo], 4)= ウィンドウ高さ<br />
+		TSK$([TaskNo], 5)= アクティブウィンドウ<br />
+		TSK$([TaskNo], 6)= ウィンドウ X<br />
+		TSK$([TaskNo], 7)= ウィンドウ Y<br />
+		TSK$([TaskNo], 8)= CGK オブジェクト開始インデックス<br />
+		TSK$([TaskNo], 9)= メニューポインタ<span class="undefined">(暫定)</span><br />
+		TSK$([TaskNo], 10)= ウィンドウ色<br />
+		TSK$([TaskNo], 11)= ウィンドウが動かされているところかどうか <br />
+		TSK$([TaskNo], 12)= 自由描画を利用するかどうか
+		TSK$([TaskNo], 13)= Undefined
+
+		<hr />
+		<h3>その他 DIM:</h3>
+		CA$(10)...CitixCmd 引数<br />
+		TSK$(20, 202)...ウィンドウタスク<br />
+		BTSK$(20,2)...バックグラウンドタスク<br />
+		TSKV(40,30)...タスク用数値変数<br />
+		TSKV$(40,30)...タスク用文字列変数<br />
+		CGK$(400,30)...CGK コントロール格納変数
+		MENU$(128,20)...メニュー保存領域
+		<br />
+
+		<hr />
+
+		<h3>CGK</h3>
+		<p>
+			GUI System:<B>C</B>itix<B>G</B>raphic<B>K</B>it <br />
+		</p>
+
+		<p>
+			Citix で利用する GUI ツールキット。
+		</p>
+
+		<h4>Button(BTN)</h4>
+
+
+		<h3>Citix API</h3>
+		<p>
+			Citix 開発のために用意する API です。ユーザーが Citix 用にアプリを開発するのに重要な機能を API として提供していく方針です。なお、Citix で利用している変数を直接いじればなんでもできそうですが、あまりおすすめしません。
+		</p>
+
+		<h3>自由描画 API</h3>
+		<dl>
+			<dt>@WDLINE AX AY AX2 AY2 AC</dt>
+			<dd>ウィンドウのクライアント領域の指定した座標に直線を引きます。</dd>
+			<dd>(AX,AY) から (AX2,AY2) に AC の色で描画します。WX, WY が正しく設定されていなければなりません。</dd>
+		</dl>
+
+		<dl>
+			<dt>@WDSTR AX AY (AX2 AY2) AC SRC$</dt>
+			<dd>ウィンドウのクライアント領域の指定した座標(から指定した終点までの視覚系範囲)に文字列を描画します。</dd>
+			<dd> (AX,AY)(から (AX2,AY2) ) に AC の色で描画します。 WX, WY が正しく設定されていなければなりません。</dd>
+		</dl>
+
+		<h3>リクエスト用 API</h3>
+
+		<dl>
+			<dt>@WDLINE AX AY AX2 AY2 AC</dt>
+			<dd>ウィンドウのクライアント領域の指定した座標に直線を引きます。</dd>
+			<dd>(AX,AY)から(AX2,AY2)にACの色で描画します。WX,WYが正しく設定されていなければなりません。</dd>
+		</dl>
+
+		<hr />
+		<h3>システム予約変数</h3>
+		<p>
+			CURX...カーソル X<br />
+			CURY...カーソル Y<br />
+		</p>
+		<p>
+			HDBTN0...BUTTON()<br />
+			HDBTN1...BUTTON(1)<br />
+			HDBTN2...BUTTON(2)<br />
+			HDBTN3...BUTTON(3)<br />
+		</p>
+	</div>
+</div>
+
+<h2>CtrBar 開発計画</h2>
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		DATA 0,"コノ Citix ニツイテ",0,1<br />
+		DATA 0,"システムセッティングセンター",1,1<br />
+		DATA 1<br />
+		DATA 0,"アプリ",1,0<br />
+		DATA 1<br />
+		DATA 0,"サイキドウ...",2,1<br />
+		DATA 0,"シャットダウン...",3,1<br />
+		DATA ""
+
+		メニュー記法。<br />
+		<p>
+			[タイプ]が最初にあるのが基本です。その後、動的にパラメーターが決まります。
+		</p>
+		<h3>メニューアイテム ID:0</h3>
+		<p>
+			普通のメニューです。
+		</p>
+
+		<dl>
+			<dt>[テキスト],[固有イベントID],[有効]</dt>
+			<dd>テキスト: 内容です。</dd>
+			<dd>固有イベントID: 選択された時に発生するイベント識別のIDです。ユーザーが自由に決めてください。</dd>
+			<dd>有効: 選択できるかどうか</dd>
+		</dl>
+
+		<h3>セパレーター ID:1</h3>
+		<p>
+			区切るものです。
+		</p>
+
+		パラメーターはありません。
+
+		<h3>ポップアップ ID:2</h3>
+		<p>
+			子メニューをリンクする要素です。
+		</p>
+
+		<dl>
+			<dt>[テキスト],[子ID],[有効]</dt>
+			<dd>テキスト: 内容です。</dd>
+			<dd>子ID: リンクする子メニューを表すID。</dd>
+			<dd>有効: 選択できるかどうか</dd>
+		</dl>
+	</div>
+</div>
+
+<h2>表記統一</h2>
+<div class="panel panel-default"><div class="panel-body">名前: Citix</div></div>
+<div class="panel panel-default"><div class="panel-body">名前の読み: シティックス【sitĺks】</div></div>
+<div class="panel panel-default"><div class="panel-body">プログラムファイル命名: 【CITIX】【Alpha版ならA Beta版ならB 製品版なら無印もしくはメジャーアップデートバージョン】【バージョン名:16進数2桁 またはRC(リリース候補)】 ex:CITIXA08</div></div>
+<div class="panel panel-default"><div class="panel-body">ジャンル: OSもどき</div></div>
+<div class="panel panel-default"><div class="panel-body">著作権表記: (C)2013-2014 Citringo Soft.</div></div>
+<div class="panel panel-default"><div class="panel-body">ウィンドウシステム: CWS</div></div>
+<div class="panel panel-default"><div class="panel-body">タスク = プログラムの実行単位。</div></div>
+<div class="panel panel-default"><div class="panel-body">ウィンドウのあるタスク: ウィンドウ</div></div>
+<div class="panel panel-default"><div class="panel-body">ウィンドウのないタスク: 常駐タスク</div></div>
+<div class="panel panel-default"><div class="panel-body">コマンド: CitixCmd Environment</div></div>
+<div class="panel panel-default"><div class="panel-body">リクエスト: RQ,リクエスト</div></div>
+<div class="panel panel-default"><div class="panel-body">ウィンドウ枠: 非クライアント領域</div></div>
+<div class="panel panel-default"><div class="panel-body">ウィンドウ内部: クライアント領域</div></div>
+<div class="panel panel-default"><div class="panel-body">GUIキット: CGK</div></div>
+<div class="panel panel-default"><div class="panel-body">自由描画 = ウィンドウ内に自由に図形等を描画できる専用のAPI、またはそれの動作。</div></div>
+<div class="panel panel-default"><div class="panel-body">環境設定: システムセッティングセンター</div></div>
+<div class="panel panel-default"><div class="panel-body">アプリ拡張子: .ctx</div></div>
+<h2>開発日記</h2>
+
+読み方
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="panel-heading">
+			タイトル
+		</div>
+		本文
+	</div>
+</div>
+
+<hr />
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		進捗
+	</div>
+	<div class="panel-body">
+		久々に日記更新。<br />
+		<img src="resources/CTX01.PNG" />
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		開発うまくいかねえ
+	</div>
+	<div class="panel-body">
+		どうにもこうにもウィンドウシステムのバグが多い。<s>ムシャクシャして地下通路にCitix捨てたったわ</s>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		現況 2013/12/11
+	</div>
+	<div class="panel-body">
+		ウィンドウシステムを作っています。もともとビットマップを持つバッファに描画し、それを移す方針でした。しかし、非常に重いことが判明したので、描画リクエスト時にレンダリングを行う方式にしました。<br />
+		<br />
+		今のところ、ウィンドウシステムをアプリ化できてない(>_<;;)<br />
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		現在状況 2013/12/10
+	</div>
+	<div class="panel-body">
+		<p>
+			CitixCmd実装。<br />
+			マルチタスク実装。<br />
+			一応、ウィンドウアプリケーションも宣言できるが、表示できない。CUIとして使う形...
+		</p>
+	</div>
+</div>

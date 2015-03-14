@@ -1,0 +1,31 @@
+<h1>News</h1>
+
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<h3 class="panel-title">News</h3>
+	</div>
+	<div id="news" class="panel-body">
+		<script>
+			$.ajax({
+				type: "GET",
+				url: "/pages/newsdat.html",
+				success: function (html) {
+					$("#news").append(html);
+				},
+				error: function (xhr, txt, error) {
+					switch (txt) {
+						case "timeout":
+							$("#news").append("<p>タイムアウトしました。</p>");
+							break;
+						case "error":
+							$("#news").append("<p>エラーが発生しました。</p>");
+							break;
+						default:
+							$("#news").append("<p>その他のエラー: </p>" + txt);
+							break;
+					}
+				}
+			});
+		</script>
+	</div>
+</div>

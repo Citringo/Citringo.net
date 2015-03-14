@@ -1,0 +1,166 @@
+<div class="panel panel-warning">
+	<div class="panel-heading">
+		<h3 class="panel-title">このページは放置中のプロジェクトについて書かれたページです！</h3>
+	</div>
+	<div class="panel-body">
+		<p>旧サイトとの互換性のために、古いページが移植されています。</p>
+		<p>シトリンの黒歴史的な痛い表現もあるかもしれないのでご了承ください(´･_･`)</p>
+	</div>
+</div>
+
+<h1>ブロックワールド</h1>
+
+<p>
+	マイクラもどきを作る
+</p>
+
+<h2>メモ</h2>
+
+<h3>チャンクチップ CHNK(32, 32)の要素</h3>
+
+<p>
+	横32マス縦32マスの部品
+</p>
+
+<p>
+	CHNK配列にはブロックIDが入り、またゲームがそれを利用する。
+</p>
+<h2>ブロックID対応表(仮)</h2>
+
+<table>
+	<thead>
+		<tr>
+			<th>画像</th>
+			<th>ブロックID</th>
+			<th>名前</th>
+			<th>説明</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<th>画像</th>
+			<th>ブロックID</th>
+			<th>名前</th>
+			<th>説明</th>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr>
+			<td></td>
+			<td>0</td>
+			<td>空気</td>
+			<td>空白。プレイヤーが配置できない（ブロックを壊せば自動的に発生するんDA）。自分が空気以外の空間にいると息ができなくて体力が落ちていく。当たり判定0</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1</td>
+			<td>土</td>
+			<td>普通の土。当たり判定がある。</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>2</td>
+			<td>草原</td>
+			<td>草の生えた土。当たり判定がある。</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>3</td>
+			<td>水</td>
+			<td>水中。左、右及び下に当たり判定のあるブロックが無い限り、流水が流れ続ける。当たり判定はないが、水中判定がある。</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>4</td>
+			<td>流水</td>
+			<td>水ブロックから流れる水。プレイヤーが配置することはできない。水と同じように当たり判定はなく、水中判定がある。</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>5</td>
+			<td>溶岩</td>
+			<td>熱い！触ったら攻撃ダメージと燃焼ダメージを受ける。</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>6</td>
+			<td>流れる溶岩</td>
+			<td>溶岩から流れるもので、溶岩と効果は同じ。隣に溶岩および流れる溶岩のどちらも存在しないと時間差で消える。</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>7</td>
+			<td>氷</td>
+			<td>滑る。<del>こんなもの作っていいんだろうか..</del></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>8</td>
+			<td>ガラス</td>
+			<td>透き通る。</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>ブロックデータ定数保存配列に入れるもの</h2>
+
+BD$(100, 10)<br>
+a,0 名前<br>
+a,1 当たり判定(0上1下2左3右)<br>
+a,2 挙動(0泳げる1滑る2重力で落ちる)<br>
+a,3 燃焼ダメージ数<br>
+a,4 触れダメージ数<br>
+a,5 乗った時の効果音<br>
+a,6 効果音最小高さ<br>
+a,7 効果音最大高さ<br>
+a,8 常時イベントルーチン名<br>
+a,9 Mobイベントルーチン名<br>
+a,10 キャラ0<br>
+a,11 キャラ1<br>
+a,12 キャラ2<br>
+a,13 キャラ3<br>
+a,14 パレット番号<br>
+a,15 取り除き関連フラグ(下記参照)<br>
+
+
+DATA 名前,上判定,下判定,左判定,右判定,泳げる,滑る,重力で落ちる,燃焼ダメージ数,触れダメージ数,乗った時の効果音,最小高さ,最大高さ,常時イベントルーチン名,Mobイベントルーチン名,キャラ0,キャラ1,キャラ2,キャラ3,パレット番号
+
+<h2>取り除き関連フラグ</h2>
+<p>
+	取り除き関連フラグは、ブロックを取り除けるか否か、取り除くためのアイテムID。
+</p>
+<p>
+	-2なら絶対に取り除けない。-1ならいかなる方法でも取り除ける。0～は要件であるアイテム。初期状態が0な時点で絶対取り外せないような気がするがバグやチートで空気をもたれたらアレなんで。
+</p>
+<p>
+	てか手でも取れるけどアイテムがアル方が良い、っていうフラグほしいな
+</p>
+
+<h2 id="Pre">プレビュー版公開</h2>
+
+<div class="panel">
+	<div class="panel-body">
+		<img src="resources/qr.png" alt="Block WorldのQRコード。" title="QR-code of BlockWorld PRG" width=580 height=375>
+		<h3>ゲーム本体<small>もっと読み込むがいいや！</small></h3>
+	</div>
+</div>
+
+<div class="panel">
+	<div class="panel-body">
+		<img src="resources/qr0.png" alt="Block Worldのキャラクター画像のQRコード。"  title="QR-code of BlockWorld CHR" width=202 height=287 >
+		<h3>キャラデータ<small>描いたなこいつ！</small></h3>
+	</div>
+</div>
+
+
+<h3>3DS向けサイズ小さめバージョン</h3>
+
+<div class="panel">
+	<div class="panel-body">
+		<h4>PRG:CTRBW</h4>
+		<img src="resources/mini0.png">
+		<img src="resources/mini2.png">
+		<img src="resources/mini3.png">
+	</div>
+</div>
+

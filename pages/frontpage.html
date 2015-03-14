@@ -1,0 +1,119 @@
+<main id="main" class="headerback">
+	<h1>Music Sheet</h1>
+	<p>
+		Music Sheet は、昔のゲーム機に採用されていた、波形メモリ音源という音源を再現し、
+		Standard Midi File(SMF) ファイルを演奏するプログラムです。
+	</p>
+	<a href='?musicsheet' class='btn btn-headerback' role='button'>Get Music Sheet!</a>	
+</main>
+<div class="page-header">
+	<h1>ようこそ <small>Welcome</small></h1>
+	<p>
+		ここは、Citringo サークルでつくったものを公開したり、その他もろもろ書き連ねていくサイトです。
+	</p>
+
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h3 class="panel-title">News</h3>
+		</div>
+		<div id="news" class="panel-body">
+			<script>
+				$.ajax({
+					type: "GET",
+					url: "/pages/newsdat.html",
+					success: function (html) {
+						$("#news").append(html);
+					},
+					error: function(xhr, txt, error) {
+						switch(txt) {
+							case "timeout":
+								$("#news").append("<p>タイムアウトしました。</p>");
+								break;
+							case "error":
+								$("#news").append("<p>エラーが発生しました。</p>");
+								break;
+							default:
+								$("#news").append("<p>その他のエラー: </p>" + txt);
+								break;
+						}
+					}
+				});
+			</script>
+		</div>
+	</div>
+
+	<div class="panel panel-warning">
+		<div class="panel-heading">
+			<h3 class="panel-title">メモ</h3>
+		</div>
+		<div class="panel-body">
+			<h3>近いうちにやりたいこと</h3>
+			<ul>
+				<li><strong>About を階層的にし、サークルについてなども書く</strong></li>
+				<li>ブログをつくる</li>
+				<li>掲示板を配置する</li>
+				<li>MarkDownをページ記述に使えるようにし、ブラウザーで編集できるようにする</li>
+				<li>コラム系をまとめて、一覧ページをつくる</li>
+				<li>各ページにパンくずリストを置く</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="./resources/citrine_byMelville2.png" alt="シトリン">
+					<div class="caption">
+						<h3>シトリンについて</h3>
+						<p>Citringo で様々な創作活動を行っている、私「シトリン」について自己紹介します。</p>
+						<p><a href="/about/" class="btn btn-primary" role="button">ここに行く！</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="./resources/appicon.png" alt="アプリ">
+					<div class="caption">
+						<h3>アプリ</h3>
+						<p>プログラミングによって作成した作品を公開します。</p>
+						<p><a href="/programs/" class="btn btn-primary" role="button">ここに行く！</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="./resources/musicicon.png" alt="ミュージック">
+					<div class="caption">
+						<h3>ミュージック</h3>
+						<p>オリジナル曲や耳コピ曲を公開しています。SoundCloud を利用しています。</p>
+						<p><a href="/Music/" class="btn btn-primary" role="button">ここに行く！</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="./resources/kani.gif" alt="かに">
+					<div class="caption">
+						<h3>かに</h3>
+						<p>かに一族について。</p>
+						<p><a href="/kani/" class="btn btn-primary" role="button">ここに行く！</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="./resources/sitemap.png" alt="サイトマップ">
+					<div class="caption">
+						<h3>サイトマップ</h3>
+						<p>目的のページが見つかるかも</p>
+						<p><a href="/sitemap/" class="btn btn-primary" role="button">ここに行く！</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

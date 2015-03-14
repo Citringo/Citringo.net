@@ -1,0 +1,66 @@
+<div class="panel panel-warning">
+	<div class="panel-heading">
+		<h3 class="panel-title">このページは昔のプロジェクトについて書かれたページです！</h3>
+	</div>
+	<div class="panel-body">
+		<p>旧サイトとの互換性のために、古いページが移植されています。</p>
+		<p>シトリンの黒歴史的な痛い表現もあるかもしれないのでご了承ください(´･_･`)</p>
+	</div>
+</div>
+<h1>CtrGE</h1>
+<div class="panel-default">
+	<div class="panel-body">
+		<img src="resources/CTRGTSCR.PNG">
+		プチコンでガジェットを表示するソフトウェアです。
+	</div>
+</div>
+
+
+<div class="panel-default">
+	<div class="panel-body">
+		ガジェット実行環境です。
+	</div>
+</div>
+
+<div class="panel-default">
+	<div class="panel-body">
+		各ガジェットの処理は1ループ毎に切り替えてます。そのため最小単位であるガジェット側の処理が遅れると、もたつきます。
+	</div>
+</div>
+
+<div class="panel-default">
+	<div class="panel-body">
+		ガジェットの動きが遅いように見えても、マウスカーソルに問題がないことがほとんどです。
+	</div>
+</div>
+
+<h2>メモリ</h2>
+<p>
+	用意する配列:
+</p>
+<ul>
+	<li>GTS(MAX_GT, YOSO)...ガジェット状態保存バッファ</li>
+	<li>GTS$(MAX_GT)...ガジェット種類保存バッファ(ガジェット名は8文字くらいの制限ありなので、二次数値配列に置き換えられそうですな)</li>
+	<li>GTV(MAX_GT,20)...ガジェット専用数値変数</li>
+	<li>GTV$(MAX_GT,20)...ガジェット専用文字列変数</li>
+</ul>
+
+<h2>ファイル保存</h2>
+
+<p>
+	保存リソース、候補2つ:
+</p>
+<div class="panel-default">
+	<div class="panel-body">
+		<ol>
+			<li>GRP...48KB(49152バイト)(49152文字分)</li>CHR...8192B(8192文字分)
+			<li></li>
+		</ol>
+	</div>
+</div>
+
+<div class="panel-default">
+	<div class="panel-body">
+		[CTRGE(文字列)][NEWG]([GTS$(cnt)サイズ][GTS$(cnt)])*(cnt=0 to NEWG -1)([GTS(cnt1,cnt2)])
+	</div>
+</div>
