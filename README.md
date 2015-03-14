@@ -5,13 +5,16 @@ Citringo サークルのウェブサイトです。
 
 http://citringo.net
 
+近いうちに Markdown でのページの記述を実装する予定です。
+In the near future, I'll implement to be able to write pages in Markdown.
+
 ## Technology using
-* HTML5
-* CSS3
-** Bootstrap
-* Javascript
-** JQuery
-* PHP
+- HTML5
+- CSS3
+	- Bootstrap
+- Javascript
+	- JQuery
+- PHP
 
 ##Contribution
 Report any problems to [Issue](https://github.com/syuilo/Misskey/issues?q=is%3Aopen)
