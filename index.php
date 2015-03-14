@@ -15,8 +15,8 @@ if ($pagename == "") { //まっしろけならfrontpage
 }
 ?><!DOCTYPE html>
 <!-- Citringo.net
----- (C)2015 Citringo All rights reserved.
---->
+    (C)2015 Citringo All rights reserved.
+-->
 <html lang="ja">
     <head>
 		<meta charset="utf-8">
