@@ -6,7 +6,7 @@
 body {
     padding-top: 50px;
 	background-color: #101010;
-	font-family: mplus-1p-regular, "ヒラギノ角ゴ ProN", 'Hiragino Kaku Gothic ProN', "メイリオ", "IPAexゴシック", "VL ゴシック","Takao Gothic", "TakaoExゴシック", "Segoe UI Light", Arial;
+	font-family: /*mplus-1p-regular, */"ヒラギノ角ゴ ProN", 'Hiragino Kaku Gothic ProN', "メイリオ", "IPAexゴシック", "VL ゴシック","Takao Gothic", "TakaoExゴシック", "Segoe UI Light", Arial;
 }
 .maincontainer {
     margin: 4px 4px;
@@ -103,7 +103,7 @@ img {
 
 	.show-on-pc-block {
 		display: block;
-	}
+	}	
 }
 
 @font-face
