@@ -139,11 +139,7 @@ src: url('http://mplus-fonts.sourceforge.jp/webfonts/mplus-1p-regular.ttf')
 }
 
 .marquee {
-width:600px;
-padding:0.5em 0;
 overflow:hidden;
-background-color:#f6f6f6;
-margin-bottom:10px;
 position:relative;
 }
 
@@ -155,7 +151,7 @@ padding-right:50px;
 
 .marquee p {
 margin:0;
-padding-left:600px;
+padding-left:100%;
 display:inline-block;
 white-space:nowrap;
 	-webkit-animation-name:marquee;

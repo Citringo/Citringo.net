@@ -142,7 +142,8 @@ if ($pagename == "") { //まっしろけならfrontpage
 				</div><!--navbar collapse -->
 			</div><!--container-->
 		</nav><!--navbar-->
-		<div class="dark-theme marquee" style="width: 50%; text-align: center;">
+		<div class="dark-theme marquee" style="width: 100%;">
+			<p>
 			<?php
 					echo getmes();
 					function getmes()
@@ -164,6 +165,7 @@ if ($pagename == "") { //まっしろけならfrontpage
 						}
 					}
 			?>
+			</p>
 		</div>
 		<main class="maincontainer">
 			<?php
