@@ -1,6 +1,3 @@
-<!-- Citringo.net
----- (C)2015 Citringo All rights reserved.
---->
 <?php
 //---Library Load
 include_once("./lib/core.php");   //Core Lib
@@ -16,8 +13,10 @@ if (isset($page)) {  //page クエリはCtrpages時代との互換性維持 使�
 if ($pagename == "") { //まっしろけならfrontpage
 	$pagename = "frontpage";
 }
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
+<!-- Citringo.net
+    (C)2015 Citringo All rights reserved.
+-->
 <html lang="ja">
     <head>
 		<meta charset="utf-8">
