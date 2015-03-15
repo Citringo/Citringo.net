@@ -2,7 +2,7 @@
 // Citringo.net Core Library
 // (C)2015 Citringo All rights reserved.
 
-
+include_once("./lib/MarkdownExtra.inc.php"); //MarkDown Extra Lib
 function ReadPage($pagename) {
 	$finfo = new finfo(FILEINFO_MIME);
 	$mime = $finfo->file("pages/" . $pagename);
@@ -15,7 +15,7 @@ function ReadPage($pagename) {
 	}
 	if (file_exists("pages/" . $pagename)) {
 		try {
-			return file_get_contents("pages/" . $pagename);
+			return MarkdownExtra::defaultTransform(file_get_contents("pages/" . $pagename));
 		} catch (Exception $ex) {
 			return PutErrorMessage($ex->getMessage());
 		}

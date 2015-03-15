@@ -1,7 +1,7 @@
 <?php
 //---Library Load
 include_once("./lib/core.php");   //Core Lib
-include_once("./lib/Markdown.inc.php"); //MarkDown 今はまだ使ってない('ω'乂)
+include_once("./lib/MarkdownExtra.inc.php"); //MarkDown Extra Lib
 //---
 
 parse_str(filter_input(INPUT_SERVER, "QUERY_STRING"));
