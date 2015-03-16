@@ -147,7 +147,7 @@ if ($pagename == "") { //まっしろけならfrontpage
 					echo getmes();
 					function getmes()
 					{
-						$i = rand(0, 9);
+						$i = mt_rand(0, 9);
 						switch($i)
 						{
 							case 0: return "ฅ(º ﾛ º ฅ)＜にょほーーーーwwwwwww";
