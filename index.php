@@ -8,6 +8,7 @@ parse_str(filter_input(INPUT_SERVER, "QUERY_STRING"));
 $pagename = filter_input(INPUT_SERVER, "QUERY_STRING");
 if (isset($page)) {  //page クエリはCtrpages時代との互換性維持 使わないで＞＜
 	$pagename = $page;
+	$page = &$pagename;
 }
 
 if ($pagename == "") { //まっしろけならfrontpage
