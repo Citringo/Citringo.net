@@ -80,6 +80,14 @@ img {
 	display: block;
 }
 
+.show-on-tab-inline {
+	display: none;
+}
+
+.show-on-tab-block {
+	display: none;
+}
+
 .show-on-pc-inline {
 	display: none;
 }
@@ -87,6 +95,7 @@ img {
 .show-on-pc-block {
 	display: none;
 }
+
 
 @media ( min-width : 768px) {
 	.show-on-mobile-inline {
@@ -97,13 +106,60 @@ img {
 		display: none;
 	}
 
-	.show-on-pc-inline {
+	.show-on-tab-inline {
+		display: inline;
+	}
+
+	.show-on-tab-block {
+		display: block;
+	}
+	
+	
+}
+
+.nav-link span{
+	font-size: 16px;
+			
+	transition: text-align 0.05s ease 0; 
+	   
+	-moz-transition: font-size 0.05s ease 0;
+	-webkit-transition: font-size 0.05s ease 0;
+		 
+	-o-transition: font-size 0.05s ease 0;
+		
+	-ms-transition: font-size 0.05s ease 0;
+}
+
+.nav-link:hover span {
+	font-size: 18px;
+}
+
+@media (min-width: 992px)
+{
+	.show-on-mobile-inline {
+		display: none;
+	}
+
+	.show-on-mobile-block {
+		display: none;
+	}
+	
+	.show-on-tab-inline {
+		display: none;
+	}
+
+	.show-on-tab-block {
+		display: none;
+	}	
+	
+	.show-on-pc-inline{
 		display: inline;
 	}
 
 	.show-on-pc-block {
 		display: block;
-	}	
+	}
+	
 }
 
 @font-face

@@ -1,7 +1,7 @@
 <?php
 //---Library Load
-include_once("./lib/core.php");   //Core Lib
-include_once("./lib/MarkdownExtra.inc.php"); //MarkDown Extra Lib
+require_once("./lib/core.php");   //Core Lib
+require_once("./lib/Michelf/MarkdownExtra.inc.php"); //MarkDown Extra Lib
 //---
 
 parse_str(filter_input(INPUT_SERVER, "QUERY_STRING"));
@@ -13,6 +13,7 @@ if (isset($page)) {  //page クエリはCtrpages時代との互換性維持 使�
 if ($pagename == "") { //まっしろけならfrontpage
 	$pagename = "frontpage";
 }
+
 ?><!DOCTYPE html>
 <!-- Citringo.net
     (C)2015 Citringo All rights reserved.
@@ -20,6 +21,9 @@ if ($pagename == "") { //まっしろけならfrontpage
 <html lang="ja">
     <head>
 		<meta charset="utf-8">
+		<?php
+		
+		?>
 		<base href="http://citringo.net">	<!--消すと多階層ページでcssとか読めなくなる-->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -60,7 +64,7 @@ if ($pagename == "") { //まっしろけならfrontpage
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
-    </head>
+    </head><!--head-->
     <body>
 		<?php
 		include_once("analyticstracking.php"); //Google Analytics
@@ -82,46 +86,52 @@ if ($pagename == "") { //まっしろけならfrontpage
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<a href="/about/" style="padding: 5px 15px;" data-toggle="tooltip" data-placement="bottom" title="About Citringo">
-								<img src="resources/citrine_menu.png" style="height: 40px;" alt="about">
-								<span class="show-on-mobile-inline">Citringo について</span>
+							<a href="/about/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="Citringo について">
+								<img class="show-on-tab-inline" src="resources/citrine_menu.png" style="height: 40px;" alt="about">
+								<span class="show-on-mobile-inline">About</span>
+								<span class="show-on-pc-inline">About</span>
 							</a>
 						</li>
 						<li>
-							<a href="/programs/" style="padding: 5px 15px;" data-toggle="tooltip" data-placement="bottom" title="App">
-								<img src="resources/appicon_menu.png" style="height: 40px;" alt="app">
-								<span class="show-on-mobile-inline">アプリ</span>
+							<a href="/programs/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="アプリ">
+								<img class="show-on-tab-inline" src="resources/appicon_menu.png" style="height: 40px;" alt="app">
+								<span class="show-on-mobile-inline">App</span>
+								<span class="show-on-pc-inline">App</span>
 							</a>
 						</li>
 						<li>
-							<a href="/Music/" style="padding: 5px 15px;" data-toggle="tooltip" data-placement="bottom" title="Music">
-								<img src="resources/musicicon_menu.png" style="height: 40px;" alt="musics">
-								<span class="show-on-mobile-inline">ミュージック</span>
+							<a href="/Music/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="ミュージック">
+								<img class="show-on-tab-inline" src="resources/musicicon_menu.png" style="height: 40px;" alt="musics">
+								<span class="show-on-mobile-inline">Music</span>
+								<span class="show-on-pc-inline">Music</span>
 							</a>
 						</li>
 						<li>
-							<a href="/Contact/" style="padding: 5px 15px;" data-toggle="tooltip" data-placement="bottom" title="Contact">
-								<img src="resources/contact_menu.png" style="height: 40px;" alt="contact">
-								<span class="show-on-mobile-inline">連絡先</span>
+							<a href="/Contact/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="連絡先">
+								<img class="show-on-tab-inline" src="resources/contact_menu.png" style="height: 40px;" alt="contact">
+								<span class="show-on-mobile-inline">Contact</span>
+								<span class="show-on-pc-inline">Contact</span>
 							</a>
 						</li>
 						<li>
-							<a href="/link/" style="padding: 5px 15px;" data-toggle="tooltip" data-placement="bottom" title="Links">
-								<img src="resources/links_menu.png" style="height: 40px;" alt="links">
-								<span class="show-on-mobile-inline">リンク集</span>
+							<a href="/link/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="リンク集">
+								<img class="show-on-tab-inline" src="resources/links_menu.png" style="height: 40px;" alt="links">
+								<span class="show-on-mobile-inline">Links</span>
+								<span class="show-on-pc-inline">Links</span>
 							</a>
 						</li>
 						<li>
-							<a href="/sitemap/" style="padding: 5px 15px;" data-toggle="tooltip" data-placement="bottom" title="SiteMap">
-								<img src="resources/sitemap_menu.png" style="height: 40px;" alt="links">
-								<span class="show-on-mobile-inline">サイトマップ</span>
-								<!--<span class="label label-danger">New</span>-->
+							<a href="/sitemap/" class="nav-link" style="padding:	5px 15px" data-toggle="tooltip" data-placement="bottom" title="サイトマップ">
+								<img class="show-on-tab-inline" src="resources/sitemap_menu.png" style="height: 40px;" alt="links">
+								<span class="show-on-mobile-inline">SiteMap</span>
+								<span class="show-on-pc-inline">SiteMap</span>
 							</a>
 						</li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" style="padding: 5px 15px;" data-toggle="dropdown" role="button" area-expanded="false">
-								<img src="resources/share_menu.png" style="height: 40px;" alt="share">
-								<span class="show-on-mobile-inline">SNS アカウント</span>
+							<a href="#" class="dropdown-toggle nav-link" style="padding: 5px 15px"  data-toggle="dropdown" role="button" area-expanded="false">
+								<img class="show-on-tab-inline" src="resources/share_menu.png" style="height: 40px;" alt="share">
+								<span class="show-on-mobile-inline">Account</span>
+								<span class="show-on-pc-inline">Account</span>
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu" role="menu">
@@ -165,8 +175,10 @@ if ($pagename == "") { //まっしろけならfrontpage
 					}
 			?>
 			</p>
-		</div>
+		</div><!--marquee-->
+
 		<main class="maincontainer">
+			
 			<?php
 			$pagename .= ".html";
 			try {
@@ -180,15 +192,12 @@ if ($pagename == "") { //まっしろけならfrontpage
 			}
 			?>
 
-		</main><!--Main Container-->
-
-
+		</main><!--main container-->
 		<script>//ツールチップはこうしないと使えない
 			$(function () {
 				$('[data-toggle="tooltip"]').tooltip()
 			})
-		</script>
-
+		</script><!--script-->
 		<footer class="footerback">
 			<p>
 				<a class="twitter-share-button"
@@ -246,7 +255,7 @@ if ($pagename == "") { //まっしろけならfrontpage
 			<p>
 				(C)2015 Citringo All rights reserved.
 			</p>
-		</footer>
+		</footer><!--footer-->
     </body>
 
 </html>
