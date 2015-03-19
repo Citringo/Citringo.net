@@ -2,17 +2,21 @@
 // Citringo.net Core Library
 // (C)2015 Citringo All rights reserved.
 
-include_once("./lib/MarkdownExtra.inc.php"); //MarkDown Extra Lib
+require_once("./lib/Michelf/MarkdownExtra.inc.php"); //MarkDown Extra Lib
+
+//use finfo;
+use Michelf\MarkdownExtra;
+
 function ReadPage($pagename) {
-	$finfo = new finfo(FILEINFO_MIME);
-	$mime = $finfo->file("pages/" . $pagename);
+//	$finfo = new finfo(FILEINFO_MIME);
+//	$mime = $finfo->file("pages/" . $pagename);
 
 	if (substr($pagename, 0, 2) === ".." || substr($pagename, 0, 2) === "./") {
 		throw new ErrorException("相対パス指定は使用できません。");
 	}
-	if ($mime == "application/x-httpd-php") {
-		throw new ErrorException("phpファイルは見ることができません。");
-	}
+//	if ($mime == "application/x-httpd-php") {
+//		throw new ErrorException("phpファイルは見ることができません。");
+//	}
 	if (file_exists("pages/" . $pagename)) {
 		try {
 			return MarkdownExtra::defaultTransform(file_get_contents("pages/" . $pagename));
@@ -25,15 +29,15 @@ function ReadPage($pagename) {
 }
 
 function ReadHead($pagename) {
-	$finfo = new finfo(FILEINFO_MIME);
-	$mime = $finfo->file("heads/" . $pagename);
+//	$finfo = new finfo(FILEINFO_MIME);
+//	$mime = $finfo->file("heads/" . $pagename);
 
 	if (substr($pagename, 0, 2) === "..") {
 		throw new ErrorException("相対パス指定は使用できません。");
 	}
-	if ($mime == "application/x-httpd-php") {
-		throw new ErrorException("phpファイルは見ることができません。");
-	}
+//	if ($mime == "application/x-httpd-php") {
+//		throw new ErrorException("phpファイルは見ることができません。");
+//	}
 	if (file_exists("heads/" . $pagename)) {
 		return file_get_contents("heads/" . $pagename);
 	} else {
