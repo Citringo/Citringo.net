@@ -1,13 +1,14 @@
 <?php
 //---Library Load
-require_once("./lib/core.php");   //Core Lib
-require_once("./lib/Michelf/MarkdownExtra.inc.php"); //MarkDown Extra Lib
+require_once __DIR__ . '/lib/core.php';   //Core Lib
+require_once __DIR__ . '/lib/Markdown.inc.php'; //MarkDown 今はまだ使ってない('ω'乂)
 //---
 
 parse_str(filter_input(INPUT_SERVER, "QUERY_STRING"));
 $pagename = filter_input(INPUT_SERVER, "QUERY_STRING");
 if (isset($page)) {  //page クエリはCtrpages時代との互換性維持 使わないで＞＜
 	$pagename = $page;
+	$page = &$pagename;
 }
 
 if ($pagename == "") { //まっしろけならfrontpage
@@ -157,7 +158,7 @@ if ($pagename == "") { //まっしろけならfrontpage
 					echo getmes();
 					function getmes()
 					{
-						$i = rand(0, 9);
+						$i = mt_rand(0, 9);
 						switch($i)
 						{
 							case 0: return "ฅ(º ﾛ º ฅ)＜にょほーーーーwwwwwww";
