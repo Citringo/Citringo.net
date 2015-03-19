@@ -1,7 +1,7 @@
 <?php
 //---Library Load
 require_once __DIR__ . '/lib/core.php';   //Core Lib
-require_once __DIR__ . '/lib/Markdown.inc.php'; //MarkDown 今はまだ使ってない('ω'乂)
+require_once __DIR__ . '/lib/Michelf/MarkdownExtra.inc.php'; //MarkDown Extra Lib
 //---
 
 parse_str(filter_input(INPUT_SERVER, "QUERY_STRING"));
@@ -80,7 +80,7 @@ if ($pagename == "") { //まっしろけならfrontpage
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand" style="padding: 9px 15px;" href="./index.php">
-						<img src="resources/citringo_white.svg" style="height: 32px;" alt="Citringo.net">
+						<img src="resources/citringo_white.svg" style="height: 40px;" alt="Citringo.net">
 					</a>
 
 				</div>

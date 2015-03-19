@@ -2,7 +2,7 @@
 // Citringo.net Core Library
 // (C)2015 Citringo All rights reserved.
 
-require_once("./lib/Michelf/MarkdownExtra.inc.php"); //MarkDown Extra Lib
+require_once __DIR__ . '/lib/Michelf/MarkdownExtra.inc.php'; //MarkDown Extra Lib
 
 //use finfo;
 use Michelf\MarkdownExtra;
