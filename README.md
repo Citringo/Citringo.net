@@ -4,9 +4,8 @@ The WebSite of Citringo.
 Citringo サークルのウェブサイトです。
 
 http://citringo.net
-
-近いうちに Markdown でのページの記述を実装する予定です。
-In the near future, I'll implement to be able to write pages in Markdown.
+このサイトは、ページの部品を、phpで合成して表示します。そのため、どのページでも同じヘッダー、フッターを見ることができます。
+ページは、Markdown で記述します。
 
 ## Technology using
 - HTML5
@@ -17,11 +16,11 @@ In the near future, I'll implement to be able to write pages in Markdown.
 - PHP
 
 ##Contribution
-Report any problems to [Issue](https://github.com/syuilo/Misskey/issues?q=is%3Aopen)
+Report any problems to [Issue](https://github.com/Citringo/Citringo.net/issues?q=is%3Aopen)
 
-Send [Pull Request](https://github.com/syuilo/Misskey/pulls?q=is%3Aopen)
+Send [Pull Request](https://github.com/Citringo/Citringo.net/pulls?q=is%3Aopen)
 
-バグや不満は [Issue](https://github.com/syuilo/Misskey/issues?q=is%3Aopen) にどうぞ
+バグや不満は [Issue](https://github.com/Citringo/Citringo.net/issues?q=is%3Aopen) にどうぞ
 
-開発者の方は [Pull Request](https://github.com/syuilo/Misskey/pulls?q=is%3Aopen)
+開発者の方は [Pull Request](https://github.com/Citringo/Citringo.net/pulls?q=is%3Aopen)
 
