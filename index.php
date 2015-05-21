@@ -1,7 +1,7 @@
 <?php
 //---Library Load
-require_once __DIR__ . '/lib/core.php';   //Core Lib
-require_once __DIR__ . '/lib/Michelf/MarkdownExtra.inc.php'; //MarkDown Extra Lib
+require_once dirname(__FILE__) . '/lib/core.php';   //Core Lib
+require_once dirname(__FILE__) . '/lib/Michelf/MarkdownExtra.inc.php'; //MarkDown Extra Lib
 //---
 
 parse_str(filter_input(INPUT_SERVER, "QUERY_STRING"));
@@ -21,27 +21,25 @@ if ($pagename == "") { //まっしろけならfrontpage
 <html lang="ja">
     <head>
 		<meta charset="utf-8">
-		<?php
-		?>
 		<base href="http://citringo.net">	<!--消すと多階層ページでcssとか読めなくなる-->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Citringo">
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:site" content="@Citringo" />
-<?php
-try {
-	echo ReadHead($pagename . ".html");  //heads を読み込む
-} catch (Exception $ex) {  //ないと例外が＿|￣| Σ･∴'、-=≡(´･_･`)飛ぶ
-	?>
+		<?php
+		try {
+			echo ReadHead($pagename . ".html");  //heads を読み込む
+		} catch (Exception $ex) {  //ないと例外が＿|￣| Σ･∴'、-=≡(´･_･`)飛ぶ
+			?>
 			<meta name="twitter:title" content="<?php echo $pagename; ?>" />
 			<meta name="twitter:description" content="<?php echo $pagename; ?> のページ。" />
-			<meta name="description" content="<?php echo $pagename; ?> のページ。">	
+			<meta name="description" content="<?php echo $pagename; ?> のページ。">
 			<meta name="keywords" content="Citringo, シトリン, 個人サイト">
 			<title><?php echo $pagename; ?> - Citringo.net</title>
-	<?php
-}
-?>
+			<?php
+		}
+		?>
 		<meta name="twitter:url" content="<?php print((empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]); ?>" />
 
 		<!-- Bootstrap -->
@@ -65,9 +63,9 @@ try {
 
     </head><!--head-->
     <body>
-<?php
-include_once("analyticstracking.php"); //Google Analytics
-?>
+		<?php
+		include_once("analyticstracking.php"); //Google Analytics
+		?>
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
@@ -77,7 +75,7 @@ include_once("analyticstracking.php"); //Google Analytics
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand push" style="padding: 5px 15px;" href="./index.php">
+					<a class="navbar-brand push" style="padding: 5px 15px;" href="/">
 						<img src="resources/citringo_white.svg" style="height: 40px;" alt="Citringo.net">
 					</a>
 
@@ -150,42 +148,17 @@ include_once("analyticstracking.php"); //Google Analytics
 				</div><!--navbar collapse -->
 			</div><!--container-->
 		</nav><!--navbar-->
-		<div class="dark-theme marquee" style="width: 100%;">
-			<p>
-<?php
-echo getmes();
-
-function getmes() {
-	$i = mt_rand(0, 9);
-	switch ($i) {
-		case 0: return "ฅ(º ﾛ º ฅ)＜にょほーーーーwwwwwww";
-		case 1: return "あぁ^～心がぴょんぴょんするんじゃぁ^～";
-		case 2: return "誰がハゲじゃハゲ";
-		case 3: return "まあ幼稚園の頃にすでにパソコンで遊んでたけど<( 'ω')>";
-		case 4: return "頭がフワフワする…";
-		case 5: return "└(՞ةڼ◔)」ﾇﾍﾞﾁﾞｮﾝﾇｿﾞｼﾞｮﾝﾍﾞﾙﾐｯﾃｨｽﾓｹﾞﾛﾝﾎﾞｮ";
-		case 6: return "ｶﾆｶﾞﾀﾋﾞｰﾑ(」'ω')」--------------☆";
-		case 7: return "プログラミングと作曲が趣味です";
-		case 8: return "Citringo.net は用量・用法を守って正しく使いましょう";
-		case 9: return "▂▅▇█▓▒░(’ω’)░▒▓█▇▅▂うわああああああ";
-	}
-}
-?>
-			</p>
-		</div><!--marquee-->
 
 		<main class="maincontainer">
 
-<?php
-$pagename .= ".html";
-try {
-	echo ReadPage($pagename);
-} catch (Exception $ex) {
-	http_response_code(404);
-	?>
-				<p style="font-weight: bold; color: red;"><?php echo $ex->getMessage(); ?></p>
-
-				<?php
+			<?php
+			$pagename .= ".html";
+			try {
+				echo ReadPage($pagename);
+			} catch (Exception $ex) {
+			?>
+				<p style="font-weight: bold; color: red;"><?php echo $ex->getMessage();?> </p>
+			<?php
 			}
 			?>
 
@@ -219,9 +192,9 @@ try {
 						return t;
 					}(document, "script", "twitter-wjs"));
 				</script>
-				<a href="http://b.hatena.ne.jp/entry/citringo.net%3F<?php echo urlencode($pagename); ?>" class="hatena-bookmark-button" data-hatena-bookmark-title="Citringo.net" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+				<a href="http://b.hatena.ne.jp/entry/citringo.net%3F<?php// echo urlencode($pagename); ?>" class="hatena-bookmark-button" data-hatena-bookmark-title="Citringo.net" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
 				<iframe src="http://ghbtns.com/github-btn.html?user=Citringo&repo=Citringo.net&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-			<iframe src="http://ghbtns.com/github-btn.html?user=Citringo&repo=Citringo.net&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+				<iframe src="http://ghbtns.com/github-btn.html?user=Citringo&repo=Citringo.net&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
 			</p>
 			<div class="show-on-pc-block">
 				<script>
@@ -238,9 +211,10 @@ try {
 					amazon_ad_height = "150";//--></script>
 				<script src="http://ir-jp.amazon-adsystem.com/s/ads.js"></script>
 			</div>
+
 			<p>
 
-				<a href="http://lv9.org/"> Lv9 無料ホスティング</a>のレンタルサーバーを使用しています。
+				<a href="http://hostinger.jp">Hostinger</a>のレンタルサーバーを使用しています。
 			</p>
 			<p>
 				ドメインは<a href="http://www.onamae.com/">お名前.com</a>で取得しました。
@@ -249,12 +223,13 @@ try {
 				<a href="http://getbootstrap.com/"> Bootstrap </a>を使用してデザインしています。
 			</p>
 			<p>
-				<strong>HTML5</strong>, <strong>CSS3</strong>、
+				<strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript 2.0</strong> に準拠したウェブブラウザーで正しく動作するはずです。<br>
+				<strong>Chrome</strong>, <strong>Firefox</strong>, <strong>Opera</strong>, <strong>IE11</strong> で正常に動作することを確認しています。
 			</p>
 			<p>
 				(C)2015 Citringo All rights reserved.
 			</p>
-		</footer><!--footer-->
+		</footer>
     </body>
 
 </html>

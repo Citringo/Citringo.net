@@ -113,20 +113,20 @@ img {
 	.show-on-tab-block {
 		display: block;
 	}
-	
-	
+
+
 }
 
 .nav-link span{
 	font-size: 16px;
-			
+
 	transition: text-align 0.05s ease 0; 
-	   
+
 	-moz-transition: font-size 0.05s ease 0;
 	-webkit-transition: font-size 0.05s ease 0;
-		 
+
 	-o-transition: font-size 0.05s ease 0;
-		
+
 	-ms-transition: font-size 0.05s ease 0;
 }
 
@@ -143,7 +143,7 @@ img {
 	.show-on-mobile-block {
 		display: none;
 	}
-	
+
 	.show-on-tab-inline {
 		display: none;
 	}
@@ -151,7 +151,7 @@ img {
 	.show-on-tab-block {
 		display: none;
 	}	
-	
+
 	.show-on-pc-inline{
 		display: inline;
 	}
@@ -159,14 +159,14 @@ img {
 	.show-on-pc-block {
 		display: block;
 	}
-	
+
 }
 
 @font-face
 {
-font-family: mplus-1p-regular;
-src: url('http://mplus-fonts.sourceforge.jp/webfonts/mplus-1p-regular.ttf')
-     format("truetype");
+	font-family: mplus-1p-regular;
+	src: url('http://mplus-fonts.sourceforge.jp/webfonts/mplus-1p-regular.ttf')
+		format("truetype");
 }
 
 .btn-headerback {
@@ -176,7 +176,7 @@ src: url('http://mplus-fonts.sourceforge.jp/webfonts/mplus-1p-regular.ttf')
 }
 
 .btn-headerback:hover, .btn-headerback:focus, .btn-headerback.focus, .btn-headerback:active,
-	.btn-headerback.active, .open>.dropdown-toggle.btn-headerback {
+.btn-headerback.active, .open>.dropdown-toggle.btn-headerback {
 	color: black;
 	background-color: #ffffff;
 	border-color: #ffffff;
@@ -195,21 +195,21 @@ src: url('http://mplus-fonts.sourceforge.jp/webfonts/mplus-1p-regular.ttf')
 }
 
 .marquee {
-overflow:hidden;
-position:relative;
+	overflow:hidden;
+	position:relative;
 }
 
 .marquee p:after {
-content:"";
-white-space:nowrap;
-padding-right:50px;
+	content:"";
+	white-space:nowrap;
+	padding-right:50px;
 }
 
 .marquee p {
-margin:0;
-padding-left:100%;
-display:inline-block;
-white-space:nowrap;
+	margin:0;
+	padding-left:100%;
+	display:inline-block;
+	white-space:nowrap;
 	-webkit-animation-name:marquee;
 	-webkit-animation-timing-function:linear;
 	-webkit-animation-duration:10s;
@@ -232,23 +232,23 @@ white-space:nowrap;
 	animation-iteration-count:infinite;
 }
 @-webkit-keyframes marquee {
-  from   { -webkit-transform: translate(0%);}
-  99%,to { -webkit-transform: translate(-100%);}
+	from   { -webkit-transform: translate(0%);}
+	99%,to { -webkit-transform: translate(-100%);}
 }
 @-moz-keyframes marquee {
-  from   { -moz-transform: translate(0%);}
-  99%,to { -moz-transform: translate(-100%);}
+	from   { -moz-transform: translate(0%);}
+	99%,to { -moz-transform: translate(-100%);}
 }
 @-ms-keyframes marquee {
-  from   { -ms-transform: translate(0%);}
-  99%,to { -ms-transform: translate(-100%);}
+	from   { -ms-transform: translate(0%);}
+	99%,to { -ms-transform: translate(-100%);}
 }
 @-o-keyframes marquee {
-  from   { -o-transform: translate(0%);}
-  99%,to { -o-transform: translate(-100%);}
+	from   { -o-transform: translate(0%);}
+	99%,to { -o-transform: translate(-100%);}
 }
 @keyframes marquee {
-  from   { transform: translate(0%);}
-  99%,to { transform: translate(-100%);}
+	from   { transform: translate(0%);}
+	99%,to { transform: translate(-100%);}
 }
 

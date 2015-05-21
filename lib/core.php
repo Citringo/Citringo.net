@@ -1,8 +1,7 @@
 <?php
 // Citringo.net Core Library
 // (C)2015 Citringo All rights reserved.
-
-require_once __DIR__ . '/lib/Michelf/MarkdownExtra.inc.php'; //MarkDown Extra Lib
+//require_once dirname(__FILE__) . '/Michelf/MarkdownExtra.inc.php'; //MarkDown Extra Lib
 
 //use finfo;
 use Michelf\MarkdownExtra;
@@ -24,7 +23,8 @@ function ReadPage($pagename) {
 			return PutErrorMessage($ex->getMessage());
 		}
 	} else {
-		throw new ErrorException($pagename . " は存在しません。");
+		http_response_code(404);
+		return MarkdownExtra::defaultTransform(file_get_contents("pages/404.html"));
 	}
 }
 
