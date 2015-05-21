@@ -196,21 +196,6 @@ if ($pagename == "") { //まっしろけならfrontpage
 				<iframe src="http://ghbtns.com/github-btn.html?user=Citringo&repo=Citringo.net&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
 				<iframe src="http://ghbtns.com/github-btn.html?user=Citringo&repo=Citringo.net&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
 			</p>
-			<div class="show-on-pc-block">
-				<script>
-					amazon_ad_tag = "citringo-22";
-					amazon_ad_width = "728";
-					amazon_ad_height = "90";
-				</script>
-				<script src="http://ir-jp.amazon-adsystem.com/s/ads.js"></script>
-			</div>
-			<div class="show-on-mobile-block">
-				<script><!--
-					amazon_ad_tag = "citringo-22";
-					amazon_ad_width = "180";
-					amazon_ad_height = "150";//--></script>
-				<script src="http://ir-jp.amazon-adsystem.com/s/ads.js"></script>
-			</div>
 
 			<p>
 
