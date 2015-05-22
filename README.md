@@ -5,10 +5,14 @@ Citringo サークルのウェブサイトです。
 
 http://citringo.net
 このサイトは、ページの部品を、phpで合成して表示します。そのため、どのページでも同じヘッダー、フッターを見ることができます。
-ページは、Markdown で記述します。
+ページは、HTML や Markdown で記述します。ページには php を利用できません。
+
+また、この Git リポジトリに変更があると、自動的に (Jenkins)[http://mac.citringo.net:8080] に送信され、そこから ftp デプロイされるので、常に最新の状態を保つことができると思います
+
 
 ## Technology using
 - HTML5
+	- Markdown
 - CSS3
 	- Bootstrap
 - Javascript
