@@ -208,8 +208,8 @@ if ($pagename == "") { //まっしろけならfrontpage
 				<a href="http://getbootstrap.com/"> Bootstrap </a>を使用してデザインしています。
 			</p>
 			<p>
-				<strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript 2.0</strong> に準拠したウェブブラウザーで正しく動作するはずです。<br>
-				<strong>Chrome</strong>, <strong>Firefox</strong>, <strong>Opera</strong>, <strong>IE11</strong> で正常に動作することを確認しています。
+				<b>HTML5</b>, <b>CSS3</b>, <b>JavaScript 2.0</b> に準拠したウェブブラウザーで正しく動作するはずです。<br>
+				<b>Chrome</b>, <b>Firefox</b>, <b>Opera</b>, <b>IE11</b>  で正常に動作することを確認しています。
 			</p>
 			<p>
 				(C)2015 Citringo All rights reserved.
