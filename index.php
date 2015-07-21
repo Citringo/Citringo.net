@@ -83,6 +83,13 @@ if ($pagename == "") { //まっしろけならfrontpage
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<li>
+							<a href="https://github.com/Citringo/Citringo.net/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="Fork me!">
+								<img class="show-on-tab-inline" src="resources/github_menu.png" style="height: 40px;" alt="about">
+								<span class="show-on-mobile-inline">Fork me!</span>
+								<span class="show-on-pc-inline">Fork Me!</span>
+							</a>
+						</li>
+						<li>
 							<a href="/about/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="Citringo について">
 								<img class="show-on-tab-inline" src="resources/citrine_menu.png" style="height: 40px;" alt="about">
 								<span class="show-on-mobile-inline">About</span>
