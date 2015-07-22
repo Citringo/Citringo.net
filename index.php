@@ -76,7 +76,10 @@ if ($pagename == "") { //まっしろけならfrontpage
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand push" style="padding: 5px 15px;" href="/">
-						<img src="resources/citringo_icon_white.png" style="height: 40px;" alt="Citringo.net">
+						<img class="show-on-tab-inline" src="resources/citringo_icon_white.png" style="height: 40px;" alt="Citringo.net">
+						<img class="show-on-mobile-inline" src="resources/citringo_white.png" style="height: 40px;" alt="Citringo.net">
+						<img class="show-on-pc-inline" src="resources/citringo_white.png" style="height: 40px;" alt="Citringo.net">
+						
 					</a>
 
 				</div>
