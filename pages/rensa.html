@@ -1,0 +1,53 @@
+rensa
+===============
+
+ここでは、入力したテキストを要約することができます。
+
+** 実用性は皆無です！！！使用して起きた事故などについては責任は一切負いかねますのでご了承ください！！！！ **]
+
+<script>
+function remove(str, startIndex, count) {
+    return str.substr(0, startIndex) + str.substr(startIndex + count);
+}
+
+function rensa(source)
+        {
+            var lastdata = source;
+
+            for (var x = 0; x < lastdata.length; ++x)
+            {
+                if (lastdata.length < x) break;
+                var z = lastdata[x];
+
+                if (z == "て" | z == "に" | z == "を" | z == "は" | z == "が" | z == "で" | z == "と" | z == "の" | z == "や" | z == "へ" | z == "も")
+                {
+
+                    var strpos = lastdata.indexOf(z, x + 1);
+                    if (strpos != -1)
+                    {
+                        lastdata = remove(lastdata, x, (strpos - x));
+                    }
+                }
+                if (lastdata.length < x) break;
+
+            }
+            return lastdata;
+        }
+
+
+function startrensa()
+{
+    console.log("aaa");
+    var text = $("#myform textarea").val();
+    $("#rensa").text(rensa(text));
+}
+
+</script>
+
+<form id="myform">
+    <textarea></textarea>
+    <input type="button" name="push" value="rensa!" onclick="startrensa();">
+</form>
+
+<pre id="rensa">
+</pre>
