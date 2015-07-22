@@ -6,7 +6,7 @@
 body {
     padding-top: 50px;
 	background-color: #101010;
-	font-family: /*mplus-1p-regular, */"ヒラギノ角ゴ ProN", 'Hiragino Kaku Gothic ProN', "メイリオ", "IPAexゴシック", "VL ゴシック","Takao Gothic", "TakaoExゴシック", "Segoe UI Light", Arial;
+	font-family: "ヒラギノ角ゴ ProN", 'Hiragino Kaku Gothic ProN', "メイリオ", "IPAexゴシック", "VL ゴシック","Takao Gothic", "TakaoExゴシック", "Segoe UI Light", Arial;
 }
 .maincontainer {
     margin: 4px 4px;
@@ -98,20 +98,16 @@ img {
 
 
 @media ( min-width : 768px) {
-	.show-on-mobile-inline {
-		display: none;
-	}
-
-	.show-on-mobile-block {
-		display: none;
+	.show-on-mobile-inline .show-on-mobile-block {
+		display: none !important;
 	}
 
 	.show-on-tab-inline {
-		display: inline;
+		display: inline !important;
 	}
 
 	.show-on-tab-block {
-		display: block;
+		display: block !important;
 	}
 
 
@@ -120,7 +116,7 @@ img {
 .nav-link span{
 	font-size: 16px;
 
-	transition: text-align 0.05s ease 0; 
+	transition: text-align 0.05s ease 0;
 
 	-moz-transition: font-size 0.05s ease 0;
 	-webkit-transition: font-size 0.05s ease 0;
@@ -136,28 +132,16 @@ img {
 
 @media (min-width: 992px)
 {
-	.show-on-mobile-inline {
-		display: none;
-	}
-
-	.show-on-mobile-block {
-		display: none;
-	}
-
-	.show-on-tab-inline {
-		display: none;
-	}
-
-	.show-on-tab-block {
-		display: none;
+	.show-on-mobile-inline .show-on-mobile-block .show-on-tab-inline .show-on-tab-block {
+		display: none !important;
 	}	
 
 	.show-on-pc-inline{
-		display: inline;
+		display: inline !important;
 	}
 
 	.show-on-pc-block {
-		display: block;
+		display: block !important;
 	}
 
 }
