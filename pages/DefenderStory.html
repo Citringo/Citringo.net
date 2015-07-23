@@ -1,7 +1,12 @@
-Defender Story
-=====================
+<ol class="breadcrumb">
+  <li><a href="/frontpage/"></a>frontpage</li>
+  <li><a href="/programs/">programs</a></li>
+  <li class="active">DefenderStory</li>
+</ol>
 
-古典的な 2D アクションゲームに、ノベルゲームのようなストーリー場面が合わさった、ストーリーのあるゲーム。
+<h2>
+	<img class="img-responsive" src="resources/defstory_1.png" alt="Defender Story">
+</h2>
 
 <ul class="nav nav-tabs" id="mytab">
 	<li role="presentation" class="active"><a href="#synopsis">ホーム</a></li>
@@ -10,43 +15,100 @@ Defender Story
 	<li role="presentation"><a href="#rule">ゲームルール</a></li>
 </ul>
 
- <!-- Tab panes -->
- <div class="tab-content">
-	<div role="tabpanel" class="tab-pane active" id="synopsis">
+<!-- Tab panes -->
+<div class="tab-content">
+	<div role="tabpanel" class="tab-pane fade in active" id="home">
+
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">News</h3>
+			</div>
+			<div id="news" class="panel-body">
+				<p>
+					<time>2015/7/23</time>
+					-
+					Defender Story ページを作りました。
+				</p>
+			</div>
+		</div>
+
+		<h2>Defender Story とは？</h2>
+
+		<img class="img-responsive" src="resources/defstory_1.png" alt="Defender Story スクリーンショット 1">
+
 		<p>
-			２０ｘｘ年、地球には人間だけでなく、
+			Defender Story は、典型的な2次元横スクロールアクションゲーム風の操作感に、ノベルゲームのようなストーリービューを加えたゲームです。
+		</p>
+
+		<img class="img-responsive" src="resources/defstory_2.png" alt="Defender Story スクリーンショット 1">
+
+		<p>
+			全部で10個あるステージで、主人公が冒険に出かけます。
+		</p>
+
+	</div>
+	<div role="tabpanel" class="tab-pane fade" id="synopsis">
+		<p>
+			20xx 年、地球には人間だけでなく、
 			魔王により支配された世界が存在していた。
 		</p>
-		
+
 		<p>
 			魔王は人間を滅亡させて、
 			モンスターだけで繁栄しようと、
 			人間界に部下のモンスター達を出陣させた…。
 		</p>
-		
+
 		<p>
 			このままではいけないと感じた正義感が強い兄弟
 			柊翼と柊翔は魔王の城へ乗り込み、戦いを挑んだ。
 			しかし、魔王の圧倒的な力によって２人は倒れてしまい、
 			兄の翼は洗脳され新たな魔王にされてしまう…。	
 		</p>
-		
+
 		<p>
 			絶望する弟の翔、
 			どうにかして兄を助けたいと願っていたある日、
 			翔の前に謎の少女が現れる…。
 		</p>
 	</div>
-	<div role="tabpanel" class="tab-pane" id="synopsis">
-		 
+	<div role="tabpanel" class="tab-pane fade" id="char">
+		工事中...
 	</div>
-	<div role="tabpanel" class="tab-pane" id="char">
-		 
+	<div role="tabpanel" class="tab-pane fade" id="rule">
+		<h2>操作方法</h2>
+		<dl class="dl-horizontal">
+			<dt>[←][→]</dt>
+			<dd>移動</dd>
+			<dt>[Z]</dt>
+			<dd>ジャンプ</dd>
+			<dt>[左Shift]</dt>
+			<dd>ダッシュ</dd>
+			<dt>[↑]</dt>
+			<dd>見る(看板などを)</dd>
+			<dt>[Enter]</dt>
+			<dd>ポーズ</dd>
+			<dt>[BackSpace]</dt>
+			<dd>ポーズ解除</dd>
+		</dl>
+		
+		<h2>アイテム</h2>
+		<dl class="dl-horizontal">
+			<dt>スーパーまくら</dt>
+			<dd>寝る子は育つ。スーパー翔になる</dd>
+			<dt>トウガラシ</dt>
+			<dd>辛すぎて、手から火が出る。ファイアー翔になる</dd>
+			<dt>アイスキャンディ</dt>
+			<dd>氷の力をまとう。アイス翔になる。</dd>
+			<dt>リーフ</dt>
+			<dd>葉っぱを放てるようになる。リーフ翔になる。</dd>
+			<dt>天使の羽</dt>
+			<dd>天使の力で、無敵になれる。一定時間無敵状態になる。</dd>
+			
+		</dl>
+		
 	</div>
-	<div role="tabpanel" class="tab-pane" id="rule">
-		 
-	</div>
- </div>
+</div>
 
 <script>
 	$('#mytab a').click(function (e) {
