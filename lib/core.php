@@ -100,11 +100,13 @@ function PageRender()
 }
 function GetHead()
 {
+    global $root, $theme;
     return $root . "/themes/" . $theme . "/head.php";
 }
 
 function GetBody()
 {
+    global $root, $theme;
     return $root . "/themes/" . $theme . "/body.php";
 }
 
