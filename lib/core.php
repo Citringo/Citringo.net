@@ -88,6 +88,7 @@ function GetPage() {
 
 function PageRender()
 {
+    global $pagename;
     $pagename .= ".html";
     try {
 	echo ReadPage($pagename);
