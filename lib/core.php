@@ -86,5 +86,27 @@ function GetPage() {
 	return $lastdata;
 }
 
+function PageRender()
+{
+    $pagename .= ".html";
+    try {
+	echo ReadPage($pagename);
+    } catch (Exception $ex) {
+?>
+<p style="font-weight: bold; color: red;"><?php echo $ex->getMessage();?> </p>
+<?php
+    }
+			
+}
+function GetHead()
+{
+    return __DIR__ + "/themes/" + $theme + "head.php";
+}
+
+function GetBody()
+{
+    return __DIR__ + "/themes/" + $theme + "body.php";
+}
+
 //終わり
 ?>
