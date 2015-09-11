@@ -100,12 +100,12 @@ function PageRender()
 }
 function GetHead()
 {
-    return __DIR__ . "/themes/" . $theme . "head.php";
+    return $root . "/themes/" . $theme . "/head.php";
 }
 
 function GetBody()
 {
-    return __DIR__ . "/themes/" . $theme . "body.php";
+    return $root . "/themes/" . $theme . "/body.php";
 }
 
 //終わり

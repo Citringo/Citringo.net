@@ -1,8 +1,10 @@
 <?php
 //---Library Load
-require_once dirname(__FILE__) . '/lib/core.php';   //Core Lib
-require_once dirname(__FILE__) . '/lib/Michelf/MarkdownExtra.inc.php'; //MarkDown Extra Lib
 $theme = "bootstrap";
+$root = __DIR__;
+require_once $root . '/lib/core.php';   //Core Lib
+require_once $root . '/lib/Michelf/MarkdownExtra.inc.php'; //MarkDown Extra Lib
+
 //---
 
 parse_str(filter_input(INPUT_SERVER, "QUERY_STRING"));
