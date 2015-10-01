@@ -88,7 +88,22 @@
 	</div><!--navbar collapse -->
     </div><!--container-->
 </nav><!--navbar-->
-
+<div style="height: 1.4em; padding: 3px;">
+<p style="color: white; text-align: right;"><?php
+if (isset($user)) {
+	if ($loginflag)
+	{
+        	echo "Welcome back, " . $user->screen_name . ".";
+	}else{
+		echo "あなたは管理者ではないので、ログインできません。";
+	}
+}else{
+?>
+<a href="/oauth/login.php">Sign in with twitter</a>
+<?php
+}
+?></p>
+</div>
 <main class="maincontainer">
     <?php PageRender() ?>
 </main><!--main container-->
