@@ -14,7 +14,8 @@
 
 	</div>
 	<div id="navbar" class="collapse navbar-collapse">
-	    <ul class="nav navbar-nav navbar-right">
+	    <div class="menu">
+	    <ul class="menu nav navbar-nav navbar-right">
 		<li>
 		    <a href="https://github.com/Citringo/Citringo.net/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="Fork me!">
 			<i class="fa fa-github"></i>
@@ -46,6 +47,7 @@
 		    </a>
 		</li>
 	    </ul>
+	    </div>
 	</div><!--navbar collapse -->
     </div><!--container-->
 </nav><!--navbar-->
