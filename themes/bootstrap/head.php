@@ -5,6 +5,8 @@
 		<link href='./css/bootstrap-theme.css' rel="stylesheet">
 		<!-- Main -->
 		<link href="./css/main.css" rel="stylesheet">
+		<!-- font-awesome -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<!-- Favicons -->
 		<link rel="apple-touch-icon" href="./resources/favicon.png">
 		<link rel="icon" href="./resources/favicon.png">
