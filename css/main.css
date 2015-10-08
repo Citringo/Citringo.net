@@ -252,3 +252,16 @@ img {
 	99%,to { transform: translate(-100%);}
 }
 
+.vertical-center {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 80px;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	background-color: #ccc;
+}
