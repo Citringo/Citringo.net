@@ -17,93 +17,38 @@
 	    <ul class="nav navbar-nav navbar-right">
 		<li>
 		    <a href="https://github.com/Citringo/Citringo.net/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="Fork me!">
-			<img class="show-on-tab-inline" src="resources/github_menu.png" style="height: 40px;" alt="about">
-			<span class="show-on-mobile-inline">Fork me!</span>
-			<span class="show-on-pc-inline">Fork Me!</span>
+			<i class="fa fa-github"></i>
 		    </a>
 		</li>
 		<li>
 		    <a href="/about/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="Citringo について">
-			<img class="show-on-tab-inline" src="resources/citrine_menu.png" style="height: 40px;" alt="about">
-			<span class="show-on-mobile-inline">About</span>
-			<span class="show-on-pc-inline">About</span>
+			<i class="fa fa-info-circle"></i>
 		    </a>
 		</li>
 		<li>
 		    <a href="/programs/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="アプリ">
-			<img class="show-on-tab-inline" src="resources/appicon_menu.png" style="height: 40px;" alt="app">
-			<span class="show-on-mobile-inline">App</span>
-			<span class="show-on-pc-inline">App</span>
+			<i class="fa fa-download"></i>
 		    </a>
 		</li>
 		<li>
 		    <a href="/Music/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="ミュージック">
-			<img class="show-on-tab-inline" src="resources/musicicon_menu.png" style="height: 40px;" alt="musics">
-			<span class="show-on-mobile-inline">Music</span>
-			<span class="show-on-pc-inline">Music</span>
+			<i class="fa fa-music"></i>
 		    </a>
 		</li>
 		<li>
 		    <a href="/Contact/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="連絡先">
-			<img class="show-on-tab-inline" src="resources/contact_menu.png" style="height: 40px;" alt="contact">
-			<span class="show-on-mobile-inline">Contact</span>
-			<span class="show-on-pc-inline">Contact</span>
+		    	<i class="fa fa-envelope"></i>
 		    </a>
 		</li>
 		<li>
 		    <a href="/link/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="リンク集">
-			<img class="show-on-tab-inline" src="resources/links_menu.png" style="height: 40px;" alt="links">
-			<span class="show-on-mobile-inline">Links</span>
-			<span class="show-on-pc-inline">Links</span>
+			<i class="fa fa-link"></i>
 		    </a>
-		</li>
-		<li>
-		    <a href="/sitemap/" class="nav-link" style="padding:	5px 15px" data-toggle="tooltip" data-placement="bottom" title="サイトマップ">
-			<img class="show-on-tab-inline" src="resources/sitemap_menu.png" style="height: 40px;" alt="links">
-			<span class="show-on-mobile-inline">SiteMap</span>
-			<span class="show-on-pc-inline">SiteMap</span>
-		    </a>
-		</li>
-		<li class="dropdown">
-		    <a href="#" class="dropdown-toggle nav-link" style="padding: 5px 15px"  data-toggle="dropdown" role="button" area-expanded="false">
-			<img class="show-on-tab-inline" src="resources/share_menu.png" style="height: 40px;" alt="share">
-			<span class="show-on-mobile-inline">Account</span>
-			<span class="show-on-pc-inline">Account</span>
-			<span class="caret"></span>
-		    </a>
-		    <ul class="dropdown-menu" role="menu">
-			<li><a href="https://twitter.com/Citringo">Twitter</a></li>
-			<li><a href="http://www.nicovideo.jp/user/34173135">niconico</a></li>
-			<li><a href="https://www.youtube.com/channel/UCH3I30Y6NrXTNP1kEceRRZQ">YouTube</a></li>
-			<li><a href="https://soundcloud.com/citringo">SoundCloud</a></li>
-			<li><a href="https://miiverse.nintendo.net/users/Citringo">Miiverse</a></li>
-			<li><a href="https://github.com/Citringo">GitHub</a></li>
-			<li><a href="https://misskey.xyz/Citringo">Misskey</a><li>
-			<li><a href="https://plus.google.com/110422794460132423888/posts">Google+</a></li>
-			<li><a href="http://profile.hatena.ne.jp/Topazgoodmeat/">Hatena</a></li>
-			<li><a href="http://ask.fm/Citringo">ask.fm</a></li>
-		    </ul>
 		</li>
 	    </ul>
 	</div><!--navbar collapse -->
     </div><!--container-->
 </nav><!--navbar-->
-<div style="height: 1.4em; padding: 3px;">
-<p style="color: white; text-align: right;"><?php
-if (isset($user)) {
-	if ($loginflag)
-	{
-        	echo "Welcome back, " . $user->screen_name . ".";
-	}else{
-		echo "あなたは管理者ではないので、ログインできません。";
-	}
-}else{
-?>
-<a href="/oauth/login.php">Sign in with twitter</a>
-<?php
-}
-?></p>
-</div>
 <main class="maincontainer">
     <?php PageRender() ?>
 </main><!--main container-->
