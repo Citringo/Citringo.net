@@ -45,6 +45,9 @@
 		    <a href="/link/" class="nav-link" style="padding: 5px 15px">
 			<i class="fa fa-link"></i>
 		    </a>
+		    <a href="http://blog.citringo.net" class="nav-link" style="padding: 5px 15px">
+			<i class="fa fa-wordpress"></i>
+		    </a>
 		</li>
 	    </ul>
 	    </div>
