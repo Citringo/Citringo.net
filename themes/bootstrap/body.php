@@ -17,32 +17,32 @@
 	    <div class="menu">
 	    <ul class="menu nav navbar-nav navbar-right">
 		<li>
-		    <a href="https://github.com/Citringo/Citringo.net/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="Fork me!">
-			<i class="fa fa-github"></i>
+		    <a href="https://github.com/Citringo/Citringo.net/" class="nav-link" style="padding: 5px 15px">
+			<i class="fa fa-github"></i><span class="visible-sm">Fork me!</span>
 		    </a>
 		</li>
 		<li>
-		    <a href="/about/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="Citringo について">
+		    <a href="/about/" class="nav-link" style="padding: 5px 15px">
 			<i class="fa fa-info-circle"></i>
 		    </a>
 		</li>
 		<li>
-		    <a href="/programs/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="アプリ">
+		    <a href="/programs/" class="nav-link" style="padding: 5px 15px">
 			<i class="fa fa-download"></i>
 		    </a>
 		</li>
 		<li>
-		    <a href="/Music/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="ミュージック">
+		    <a href="/Music/" class="nav-link" style="padding: 5px 15px">
 			<i class="fa fa-music"></i>
 		    </a>
 		</li>
 		<li>
-		    <a href="/Contact/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="連絡先">
+		    <a href="/Contact/" class="nav-link" style="padding: 5px 15px">
 		    	<i class="fa fa-envelope"></i>
 		    </a>
 		</li>
 		<li>
-		    <a href="/link/" class="nav-link" style="padding: 5px 15px" data-toggle="tooltip" data-placement="bottom" title="リンク集">
+		    <a href="/link/" class="nav-link" style="padding: 5px 15px">
 			<i class="fa fa-link"></i>
 		    </a>
 		</li>
