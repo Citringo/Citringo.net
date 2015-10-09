@@ -18,35 +18,35 @@
 	    <ul class="menu nav navbar-nav navbar-right">
 		<li>
 		    <a href="https://github.com/Citringo/Citringo.net/" class="nav-link" style="padding: 5px 15px">
-			<i class="fa fa-github"></i><span class="visible-sm">Fork me!</span>
+			<i class="fa fa-github"></i><span class="visible-xs">Fork me!</span>
 		    </a>
 		</li>
 		<li>
 		    <a href="/about/" class="nav-link" style="padding: 5px 15px">
-			<i class="fa fa-info-circle"></i>
+			<i class="fa fa-info-circle"></i><span class="visible-xs">Citringo とは</span>
 		    </a>
 		</li>
 		<li>
 		    <a href="/programs/" class="nav-link" style="padding: 5px 15px">
-			<i class="fa fa-download"></i>
+			<i class="fa fa-download"></i><span class="visible-xs">ダウンロード</span>
 		    </a>
 		</li>
 		<li>
 		    <a href="/Music/" class="nav-link" style="padding: 5px 15px">
-			<i class="fa fa-music"></i>
+			<i class="fa fa-music">ミュージック</i>
 		    </a>
 		</li>
 		<li>
 		    <a href="/Contact/" class="nav-link" style="padding: 5px 15px">
-		    	<i class="fa fa-envelope"></i>
+		    	<i class="fa fa-envelope"></i><span class="visible-xs">連絡先</span>
 		    </a>
 		</li>
 		<li>
 		    <a href="/link/" class="nav-link" style="padding: 5px 15px">
-			<i class="fa fa-link"></i>
+			<i class="fa fa-link"></i><span class="visible-xs">リンク</span>
 		    </a>
 		    <a href="http://blog.citringo.net" class="nav-link" style="padding: 5px 15px">
-			<i class="fa fa-wordpress"></i>
+			<i class="fa fa-wordpress"></i><span class="visible-xs">ブログへ行く</span>
 		    </a>
 		</li>
 	    </ul>
