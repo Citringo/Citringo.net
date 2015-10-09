@@ -265,3 +265,7 @@ img {
 	text-align:center;
 	background-color: #ccc;
 }
+
+ul.menu a i.fa {
+	font-size: 32px;
+}
