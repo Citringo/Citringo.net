@@ -9,7 +9,7 @@ function ReadPage($pagename) {
 //	$finfo = new finfo(FILEINFO_MIME);
 //	$mime = $finfo->file("pages/" . $pagename);
 
-	if (substr($pagename, 0, 2) === ".." || substr($pagename, 0, 2) === "./") {
+	if (strstr($pagename, "..") || substr($pagename, 0, 2) === "./") {
 		throw new ErrorException("相対パス指定は使用できません。");
 	}
 //	if ($mime == "application/x-httpd-php") {
@@ -31,7 +31,7 @@ function ReadHead($pagename) {
 //	$finfo = new finfo(FILEINFO_MIME);
 //	$mime = $finfo->file("heads/" . $pagename);
 
-	if (substr($pagename, 0, 2) === "..") {
+	if (strstr($pagename, "..")) {
 		throw new ErrorException("相対パス指定は使用できません。");
 	}
 //	if ($mime == "application/x-httpd-php") {
