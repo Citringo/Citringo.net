@@ -12,6 +12,7 @@ if (isset($page)) {  //page クエリはCtrpages時代との互換性維持 使�
     $pagename = $page;
     $page = &$pagename;
 }
+$pagename = htmlspecialchars($pagename);
 
 if ($pagename == "") { //まっしろけならfrontpage
     $pagename = "frontpage";
