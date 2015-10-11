@@ -4,33 +4,6 @@ session_start();
 $theme = "bootstrap";
 $root = __DIR__;
 require_once $root . '/lib/core.php';   //Core Lib
-require_once $root . '/lib/Michelf/MarkdownExtra.inc.php'; //MarkDown Extra Lib
-require_once 'oauth/common.php';
-require_once 'oauth/twitteroauth/autoload.php';
-
-use Abraham\TwitterOAuth\TwitterOAuth;
-
-$user = null;
-$loginflag = false;
-if (isset($_SESSION['access_token'])){
-	$access_token = $_SESSION['access_token'];
-
-	$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oauth_token'], $access_token['oauth_token_secret']);
-
-	$user = $connection->get("account/verify_credentials");
-	error_log("access token get", 0);
-	ob_start();
-	var_dump($user);
-	$result =ob_get_contents();
-	ob_end_clean();
-	
-	if ($user->id == 1214680922)
-		$loginflag = true;
-
-	file_put_contents("user.log", $result);
-
-}
-
 //---
 
 parse_str(filter_input(INPUT_SERVER, "QUERY_STRING"));
