@@ -1,4 +1,6 @@
 # Citringo.net
+(C)2015 Citringo
+
 The WebSite of Citringo.
 
 Citringo サークルのウェブサイトです。
