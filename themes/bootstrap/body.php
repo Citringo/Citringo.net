@@ -108,6 +108,9 @@
 	<b>Chrome</b>, <b>Firefox</b>, <b>Opera</b>, <b>IE11</b>  で正常に動作することを確認しています。
     </p>
     <p>
-	(C)2015 Citringo All rights reserved.
+	(C) 2015 Citringo
+    </p>
+    <p style="color: #444">
+	<?php echo `git log -1 --pretty=oneline` ?>
     </p>
 </footer>
