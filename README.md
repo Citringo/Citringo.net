@@ -3,7 +3,9 @@
 
 The WebSite of Citringo.
 
-Citringo サークルのウェブサイトです。
+旧 Citringo サークルのウェブサイトです。
+
+<strong>現在，このサイトは使用されておらず，メンテナンスされていないのでご注意ください．</strong>
 
 http://citringo.net
 このサイトは、CMSのようになっており、レイアウトとコンテンツが分離されています。
